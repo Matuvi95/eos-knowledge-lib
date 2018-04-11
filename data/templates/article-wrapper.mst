@@ -20,6 +20,7 @@
         </script>
         {{{share-actions}}}
         {{{content}}}
+        <canvas class="GtkWidget" style="width: 100%;" id="nav_content"></canvas>
         <script type="text/javascript">
             window.crosslink_init({{{crosslink-data}}});
             window.chunk_init({{{chunk-data}}});
