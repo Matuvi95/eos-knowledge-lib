@@ -194,7 +194,7 @@ var Document = new Module.Class({
                 // an error page in the view. If we do this, make sure to hide spinner
                 // when showing error page :)
 
-                this.content_view.load_uri(this.model.ekn_id);
+                this.content_view.load_uri(this.model.id);
             } else if (this.model.content_type === 'application/pdf') {
                 let stream = this.model.get_content_stream();
                 let content_type = this.model.content_type;
@@ -314,7 +314,7 @@ var Document = new Module.Class({
 
             let [baseURI, hash] = decision.request.uri.split('#');
 
-            if (baseURI.startsWith(this.model.ekn_id)) {
+            if (baseURI.startsWith(this.model.id)) {
                 // If this check is true, then we are navigating to the current
                 // page or an anchor on the current page. If the anchor comes
                 // from the original content just scroll to it.
